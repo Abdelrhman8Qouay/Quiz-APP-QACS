@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+*::selection {
+    background: transparent;
+    color: blueviolet;
+}
+
+:root {
+    --back: #ddedfe;
+    --text: rgb(8, 8, 8);
+    --body: #fff;
+    --main-color: rgb(25, 224, 101);
+}
+
+.darkMode {
+    --back: rgb(48, 48, 48);
+    --text: rgb(247, 247, 247);
+    --body: rgb(8, 8, 8);
+    --main-color: rgb(25, 224, 101);
+}
+
+body {
+    background: var(--body);
+}
+
+.containerA {
+    max-width: 825px;
+    margin: auto;
+}
+
+/* Start Header */
+header {
+    background-color: var(--back);
+    width: 100%;
+    padding: 1rem 1.5rem;
+}
+header .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+header .content h1 {
+    font-family: none;
+    color: #dc3545;
+    cursor: default;
+}
+
+header .content ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+header .content ul li {
+    list-style: none;
+}
+header .content ul li a, span{
+    text-decoration: none;
+    color: var(--text);
+    font-size: 15px;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+/* End Header */
+
+/* Start Section */
+section .content {
+    background-color: var(--back);
+    padding: 1rem;
+    color: var(--text);
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+section .content .number {
+    text-align: center;
+}
+section .content .number span {
+    color: var(--main-color);
+}
+
+section .content .answers {
+    display: flex;
+    flex-direction: column;
+}
+
+section .content .answers .answer {
+    background: var(--body);
+    padding: 1rem 1.5rem;
+}
+
+section .content .answers .answer input {
+    margin-right: 1rem;
+}
+
+section .content .answers .answer input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+section .content .answers .answer input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: rgb(25, 224, 101);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+
+section #nxt-button {
+    border: none;
+    width: 100%;
+    background: rgb(25, 224, 101);
+    color: #414141;
+    padding: 1rem 1.2rem;
+    font-weight: bold;
+}
+
+section .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text);
+    font-weight: bold;
+    padding: 1rem;
+    background: var(--back);
+}
+section .info .time {
+    color: var(--text);
+    font-weight: bold;
+}
+section .info .categ {
+    color: var(--text);
+    font-weight: bold;
+}
+/* End Section */
+
