@@ -1,17 +1,17 @@
 [
     {
-        "title": "Why We Use <br> Tag",
-        "answer_1": "Because it make break",
-        "answer_2": "Because it make the font italic",
-        "answer_3": "Because it make the font bold",
-        "correct_answer": "Because it make break"
+        "title": "What does <figure> Tag Do?",
+        "answer_1": "Add a new Img in HTML",
+        "answer_2": "mark up a photo in a document",
+        "answer_3": "Get another src for Img",
+        "correct_answer": "mark up a photo in a document"
     },
     {
-        "title": "Why We Use <h1> Tag",
-        "answer_1": "Because it make break",
-        "answer_2": "Because it make the font italic",
-        "answer_3": "Because it make the font bold",
-        "correct_answer": "Because it make break"
+        "title": "How Many Tags For H Heading in HTML?",
+        "answer_1": "Less than 3",
+        "answer_2": "More than 5",
+        "answer_3": "8 Tags for Heading",
+        "correct_answer": "More than 5"
     },
     {
         "title": "<iframe> Can Contain Border With It?",
@@ -21,17 +21,17 @@
         "correct_answer": "By default, an iframe has a border around it."
     },
     {
-        "title": "Why We Use <b> Tag",
-        "answer_1": "Because it make break",
-        "answer_2": "Because it make the font italic",
-        "answer_3": "Because it make the font bold",
-        "correct_answer": "Because it make break"
+        "title": "What the Important In <noscript> Tag?",
+        "answer_1": "When The Browser Not Accept <script> Tag",
+        "answer_2": "When The Page Not Work With Offline",
+        "answer_3": "Like Same with <script> Tag, But Some Difference",
+        "correct_answer": "When The Browser Not Accept <script> Tag"
     },
     {
-        "title": "Why We Use <img> Tag",
-        "answer_1": "Because it make break",
-        "answer_2": "Because it make the font italic",
-        "answer_3": "Because it make the font bold",
-        "correct_answer": "Because it make break"
+        "title": "What does <abbr> Tag Do?",
+        "answer_1": "No Difference Between title and <abbr> Tag",
+        "answer_2": "Not Exist already.",
+        "answer_3": "defines an abbreviation or an acronym",
+        "correct_answer": "defines an abbreviation or an acronym"
     }
 ]

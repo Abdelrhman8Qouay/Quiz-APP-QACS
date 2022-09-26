@@ -8,6 +8,10 @@
     color: blueviolet;
 }
 
+body {
+    background-color: var(--body);
+}
+
 :root {
     --back: #ddedfe;
     --text: rgb(8, 8, 8);
@@ -22,9 +26,6 @@
     --main-color: rgb(25, 224, 101);
 }
 
-body {
-    background: var(--body);
-}
 
 .containerA {
     max-width: 825px;
@@ -69,9 +70,13 @@ header .content ul li a, span{
 /* End Header */
 
 /* Start Section */
+section {
+    transition: 0.5s;
+}
+section.hidden {
+    display: none;
+}
 section .content {
-    background-color: var(--back);
-    padding: 1rem;
     color: var(--text);
     font-weight: bold;
     display: flex;
@@ -93,7 +98,7 @@ section .content .answers {
 }
 
 section .content .answers .answer {
-    background: var(--body);
+    background: var(--back);
     padding: 1rem 1.5rem;
 }
 
@@ -122,21 +127,28 @@ section .content .answers .answer input[type='radio']:checked:after {
     top: -2px;
     left: -1px;
     position: relative;
-    background-color: rgb(25, 224, 101);
+    background-color: var(--main-color);
     content: '';
     display: inline-block;
     visibility: visible;
     border: 2px solid white;
+}
+section .content .answers .answer input[type='radio']:checked ~ label {
+    color: var(--main-color);
 }
 
 
 section #nxt-button {
     border: none;
     width: 100%;
-    background: rgb(25, 224, 101);
+    background: #3eeaea;
     color: #414141;
     padding: 1rem 1.2rem;
     font-weight: bold;
+}
+section #nxt-button.disabled {
+    background: #626262;
+    cursor: auto;
 }
 
 section .info {
@@ -157,4 +169,66 @@ section .info .categ {
     font-weight: bold;
 }
 /* End Section */
+
+/* Start Result */
+.result {
+    display: none;
+    min-height: 300px;
+    color: var(--text);
+    font-weight: bold;
+    width: 100%;
+    transition: 0.5s;
+    align-items: center;
+}
+.result.active {
+    display: flex;
+}
+
+.result .containerA {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.result .containerA img {
+    width: 150px;
+    height: 150px;
+}
+.result .containerA .title span {
+    color: var(--main-color);
+}
+
+/* End Result */
+
+
+/* Start Aside */
+aside {
+    max-height: 300px;
+}
+aside .content {
+    color: var(--text);
+    font-weight: bold;
+}
+
+aside .content h2 {
+    text-align: center;
+    color: var(--main-color);
+}
+
+aside .content .categories {
+    overflow-x: scroll;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+aside .content .categories .category {
+    height: 100%;
+    width: 250px;
+    color: var(--text);
+    margin: 0 10px;
+    background: var(--body);
+    font-weight: bold;
+}
+/* End Aside */
 
