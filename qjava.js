@@ -6,8 +6,19 @@ ButtonMode.addEventListener('click', () => {
 
 
 
+// app option key
+let currentIndexData = 1;
+let rightAnswer = 0;
+var MinutesDown = 60 * 1.5;
+let containQuestions;
+
+let jsQuestions = "./jsonQuestions/Javascript_question.json";
+let htmlQuestions = "./jsonQuestions/html_question.json";
+
+
 // variables of all app
-getQueses();
+
+// getQueses();
 
 let numberOf = document.querySelector(".number");
 let titleQue = document.querySelector("section .content .title");
@@ -16,12 +27,29 @@ let NextButton = document.getElementById("nxt-button");
 let buttonSound = new Audio("./assets/audios/buttonSound.mp3");
 
 
+// modal game with page
+let containerModal = document.getElementById("modal-container");
+window.onload = ()=> { containerModal.classList.add("show_modal") }
 
-// app option key
-let currentIndexData = 1;
-let rightAnswer = 0;
-var MinutesDown = 60 * 1.5;
+let questionCards = document.querySelectorAll(".modal-content .card-modal");
+questionCards.forEach((card)=> {
+    card.addEventListener('click', ()=> {
+        // containerModal.remove();
+        containerModal.classList.remove("show_modal");
+        containQuestions = card.dataset.quiz;
+        getQueses();
+    })
+})
 
+
+
+
+// let git= document.querySelector("aside .categories .js");
+// git.onclick = ()=> {
+//     containQuestions = jsQuestions;
+//     getQueses();
+//     this.classList.add("con");
+//     }
 
 // get questions from ajax
 function getQueses() {
@@ -97,7 +125,7 @@ function getQueses() {
             }
         }
     }
-    xhttp.open("GET", "./jsonQuestions/html_question.json", true);
+    xhttp.open("GET", containQuestions, true);
     xhttp.send();
 }
 
