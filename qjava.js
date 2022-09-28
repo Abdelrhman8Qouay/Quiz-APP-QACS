@@ -12,6 +12,7 @@ let rightAnswer = 0;
 var MinutesDown = 60 * 1.5;
 let containQuestions;
 
+
 let jsQuestions = "./jsonQuestions/Javascript_question.json";
 let htmlQuestions = "./jsonQuestions/html_question.json";
 
@@ -25,6 +26,10 @@ let titleQue = document.querySelector("section .content .title");
 let AnswersContainer = document.querySelector("section .content .answers");
 let NextButton = document.getElementById("nxt-button");
 let buttonSound = new Audio("./assets/audios/buttonSound.mp3");
+let section = document.querySelector("section");
+let resultTitle = document.querySelector(".result .title");
+let imgResult = document.querySelector(".result img");
+let resultSection = document.querySelector(".result");
 
 
 // modal game with page
@@ -34,22 +39,34 @@ window.onload = ()=> { containerModal.classList.add("show_modal") }
 let questionCards = document.querySelectorAll(".modal-content .card-modal");
 questionCards.forEach((card)=> {
     card.addEventListener('click', ()=> {
-        // containerModal.remove();
         containerModal.classList.remove("show_modal");
         containQuestions = card.dataset.quiz;
         getQueses();
+
+        let nameCard = document.querySelector(".containerA .info .categ span");
+        nameCard.textContent = card.children[1].textContent;
+    })
+})
+
+let questionCardsPage = document.querySelectorAll(".content .categories .category");
+questionCardsPage.forEach((card)=> {
+    card.addEventListener('click', ()=> {
+        removeQuestion();
+        currentIndexData = 1;
+        rightAnswer = 0;
+        if (section.classList.contains("hidden") && resultSection.classList.contains("active")) {
+            section.classList.remove("hidden");
+            resultSection.classList.remove("active");
+        }
+        containQuestions = card.dataset.quiz;
+        getQueses();
+
+        let nameCard = document.querySelector(".containerA .info .categ span");
+        nameCard.textContent = card.children[1].textContent;
     })
 })
 
 
-
-
-// let git= document.querySelector("aside .categories .js");
-// git.onclick = ()=> {
-//     containQuestions = jsQuestions;
-//     getQueses();
-//     this.classList.add("con");
-//     }
 
 // get questions from ajax
 function getQueses() {
@@ -100,9 +117,9 @@ function getQueses() {
                         if(input.checked === true) { input.dataset.answer === data[currentIndexData - 1].correct_answer? rightAnswer++ : false ; }
                     });
 
-                    let section = document.querySelector("section");
+
+                    // section.classList.add("hidden");
                     section.classList.add("hidden");
-                    let resultSection = document.querySelector(".result");
                     resultSection.classList.add("active");
 
                     // put all results information
@@ -185,5 +202,17 @@ function startTimer(duration, display) {
             clearInterval(timingInterval);
             NextButton.click();
         }
-    }, 1000);
+    }, 100);
+}
+
+
+// function to remove data from content questions
+function removeQuestion() {
+    // stop CountDown of time
+    // clearInterval(timingInterval);
+
+    // delete all of old data to get the next
+    let answers = document.querySelectorAll(".answers .answer");
+    answers.forEach(answer=> answer.remove());
+    document.querySelector("section .content .title h2").remove();
 }

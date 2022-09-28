@@ -1,0 +1,37 @@
+[
+    {
+        "title": "What does CSS stand for?",
+        "answer_1": "Cascading Style Sheets",
+        "answer_2": "Colorful Style Sheets",
+        "answer_3": "Creative Style Sheets",
+        "correct_answer": "Cascading Style Sheets"
+    },
+    {
+        "title": "What is the correct HTML for referring to an external style sheet?",
+        "answer_1": "<style src='mystyle.css'>",
+        "answer_2": "<link rel='stylesheet' type='text/css' href='mystyle.css'>",
+        "answer_3": "<stylesheet>mystyle.css</stylesheet>",
+        "correct_answer": "<link rel='stylesheet' type='text/css' href='mystyle.css'>"
+    },
+    {
+        "title": "Where in an HTML document is the correct place to refer to an external style sheet?",
+        "answer_1": "In the <body> section",
+        "answer_2": "At the end of the document",
+        "answer_3": "In the <head> section",
+        "correct_answer": "In the <head> section"
+    },
+    {
+        "title": "Which HTML tag is used to define an internal style sheet?",
+        "answer_1": "<script>",
+        "answer_2": "<css>",
+        "answer_3": "<style>",
+        "correct_answer": "<style>"
+    },
+    {
+        "title": "Which HTML attribute is used to define inline style?",
+        "answer_1": "class",
+        "answer_2": "style",
+        "answer_3": "styles",
+        "correct_answer": "style"
+    }
+]

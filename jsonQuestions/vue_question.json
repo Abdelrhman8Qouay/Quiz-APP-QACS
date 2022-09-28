@@ -1,0 +1,37 @@
+[
+    {
+        "title": "Which of the following statement best define Vue.js?",
+        "answer_1": "Vue.js an open-source JavaScript library that is used for developing user interfaces.",
+        "answer_2": "Vue.js an open-source Front-end JavaScript framework used for developing user interfaces.",
+        "answer_3": "Vue.js is a JavaScript library constructed to facilitate HTML DOM tree traversal and administration, event handling, CSS activity, and Ajax",
+        "correct_answer": "Vue.js an open-source Front-end JavaScript framework used for developing user interfaces."
+    },
+    {
+        "title": "Why is Vue.js called a progressive framework?",
+        "answer_1": "Vue.js called a progressive framework because it is being changed and developed continually.",
+        "answer_2": "Vue.js is called a progressive framework because it facilitates us to create Dynamic User Interfaces and single-page applications.",
+        "answer_3": "All of the above.",
+        "correct_answer": "Vue.js called a progressive framework because it is being changed and developed continually."
+    },
+    {
+        "title": "What is the main usage of Vue.js?",
+        "answer_1": "Vue.js is a dynamic JavaScript framework that is frequently used for developing user interfaces.",
+        "answer_2": "Vue.js is a JavaScript library that makes user interfaces for single-page applications by dividing UI into components.",
+        "answer_3": "Vue.js uses the MVVM pattern to bind data to certain DOM elements.",
+        "correct_answer": "Vue.js is a dynamic JavaScript framework that is frequently used for developing user interfaces."
+    },
+    {
+        "title": "Which company invented Vue.js?",
+        "answer_1": "Facebook",
+        "answer_2": "Twitter",
+        "answer_3": "Google",
+        "correct_answer": "Google"
+    },
+    {
+        "title": "Which of the following data binding interpolation is also known as 'Mustache' syntax?",
+        "answer_1": "v-on",
+        "answer_2": "{{}}",
+        "answer_3": "[]",
+        "correct_answer": "{{}}"
+    }
+]

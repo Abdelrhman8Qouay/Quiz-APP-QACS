@@ -37,6 +37,8 @@ header {
     background-color: var(--back);
     width: 100%;
     padding: 1rem 1.5rem;
+    margin-top: 1rem;
+    margin-left: 5rem;
 }
 header .content {
     display: flex;
@@ -60,10 +62,10 @@ header .content ul {
 header .content ul li {
     list-style: none;
 }
-header .content ul li a, span{
+header .content ul li a{
     text-decoration: none;
     color: var(--text);
-    font-size: 15px;
+    font-size: 20px;
     margin-left: 2rem;
     cursor: pointer;
 }
@@ -90,6 +92,7 @@ section .content .number {
 }
 section .content .number span {
     color: var(--main-color);
+    font-size: unset;
 }
 
 section .content .answers {
@@ -168,6 +171,11 @@ section .info .categ {
     color: var(--text);
     font-weight: bold;
 }
+section .info .categ span {
+    color: var(--main-color);
+    margin-left: 0;
+    cursor: default;
+}
 /* End Section */
 
 /* Start Result */
@@ -215,20 +223,61 @@ aside .content h2 {
 }
 
 aside .content .categories {
-    overflow-x: scroll;
-    width: 100%;
-    height: 300px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-aside .content .categories .category {
-    height: 100%;
-    width: 250px;
+    position: relative;
+    text-align: center;
+    margin-top: 1rem;
+    border-radius: 5px;
+    transition: all 0.4s;
     color: var(--text);
-    margin: 0 10px;
-    background: var(--body);
     font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+aside .content .categories::-webkit-scrollbar {
+    background: #8a878c;
+    width: 8px;
+    border-end-end-radius: 5px;
+    border-top-right-radius: 5px;
+}
+aside .content .categories::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+}
+
+aside .content .categories .category {
+    flex: 1 0 33.33%;
+    background-color: var(--back);
+    padding: 1rem;
+    position: relative;
+    text-align: start;
+    cursor: pointer;
+    transition: 0.5s;
+}
+aside .content .categories .category::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(222 197 255 / 55%);
+    width: 100%;
+    height: 100%;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+aside .content .categories .category:hover::before {
+    transform: scaleX(1);
+}
+
+aside .content .categories .category img {
+    width: 85px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    height: 85px;
 }
 /* End Aside */
 
@@ -313,7 +362,7 @@ aside .content .categories .category {
 }
 
 .modal-container .modal-content .card-modal {
-    flex: 0 0 350px;
+    flex: 0 0 33.33%;
     background-color: #fff;
     padding: 1rem;
     position: relative;
@@ -345,3 +394,11 @@ aside .content .categories .category {
     height: 85px;
 }
 /* End Modal above  */
+
+
+/* media for all page  */
+@media (max-width: 925px) {
+    body header {
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,40 @@
+[
+    {
+        "title": "Which of the following statement is correct?",
+        "answer_1": "Node.js is Server Side Language.",
+        "answer_2": "Node.js is the Client Side Language.",
+        "answer_3": "None of the above",
+        "correct_answer": "Node.js is Server Side Language."
+    },
+    {
+        "title": "What does the REPL stand for?",
+        "answer_1": "REPL stands for 'Read Eval Print Loop'.",
+        "answer_2": "REPL stands for 'Research Eval Program Learn'.",
+        "answer_3": "REPL stands for 'Read Eval Point Loop'.",
+        "correct_answer": "REPL stands for 'Read Eval Print Loop'."
+    },
+    {
+        "title": "Which of the following command is used to start a REPL session?",
+        "answer_1": "$ node",
+        "answer_2": "$ node start",
+        "answer_3": "$ node console",
+        "correct_answer": "$ node console"
+    },
+    {
+        "title": "In which language is Node.js written?",
+        "answer_1": "JavaScript",
+        "answer_2": "C",
+        "answer_3": "C++",
+        "answer_4": "CoffeeScript",
+        "answer_5": "All of the above",
+        "correct_answer": "All of the above"
+    },
+    {
+        "title": "Which of the following command is used to install the Node.js express module?",
+        "answer_1": "$ npm install express",
+        "answer_2": "$ node install express",
+        "answer_3": "$ install express",
+        "answer_4": "None of the above",
+        "correct_answer": "$ npm install express"
+    }
+]

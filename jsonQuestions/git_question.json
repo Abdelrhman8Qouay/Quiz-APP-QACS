@@ -1,0 +1,37 @@
+[
+    {
+        "title": "What the Difference between Git and Githup?",
+        "answer_1": "Just Git is Alias for Githup",
+        "answer_2": "Githup managing with Git, But githup does somethings others with original Tasks",
+        "answer_3": "git is managing all your project from scratch, but github showing it",
+        "correct_answer": "git is managing all your project from scratch, but github showing it"
+    },
+    {
+        "title": "What does Git Status Show?",
+        "answer_1": "Showing all Status before & after Git add Level.",
+        "answer_2": "Showing Status of your Code in Project.",
+        "answer_3": "Just Showing Status before Git add Level",
+        "correct_answer": "Showing all Status before & after Git add Level."
+    },
+    {
+        "title": "Do you Can add another Branches?",
+        "answer_1": "What are you Talking About",
+        "answer_2": "Yes I Can with some of Codes in cmd on my repo.",
+        "answer_3": "No You Can't, already Exist Main Branch",
+        "correct_answer": "Yes I Can with some of Codes in cmd on my repo."
+    },
+    {
+        "title": "Do you Have to add Commit Some Message?",
+        "answer_1": "No You shouldn't, But you can add it.",
+        "answer_2": "Yes You should do this To get Message with every Update.",
+        "answer_3": "This is evident in use.",
+        "correct_answer": "This is evident in use."
+    },
+    {
+        "title": "What the Main Levels to upload your Project on Repo?",
+        "answer_1": "Git init, then Git Add files, then Git Commit then git repoUrl then git push",
+        "answer_2": "with Git Add then Git repoUrl then Git MainBranch then Git push.",
+        "answer_3": "Git Add and Git RepoUrl Git Commit then Git push",
+        "correct_answer": "Git init, then Git Add files, then Git Commit then git repoUrl then git push"
+    }
+]
