@@ -9,7 +9,7 @@ ButtonMode.addEventListener('click', () => {
 // app option key
 let currentIndexData = 1;
 let rightAnswer = 0;
-var MinutesDown = 60 * 1.5;
+var MinutesDown = 60 * 1.25;
 let containQuestions;
 
 
@@ -202,7 +202,7 @@ function startTimer(duration, display) {
             clearInterval(timingInterval);
             NextButton.click();
         }
-    }, 100);
+    }, 1000);
 }
 
 
