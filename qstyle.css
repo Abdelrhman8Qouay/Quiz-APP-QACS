@@ -49,7 +49,7 @@ header .content {
 }
 header .content h1 {
     font-family: none;
-    color: #dc3545;
+    color: #0d6efd;
     cursor: default;
 }
 
@@ -62,7 +62,8 @@ header .content ul {
 header .content ul li {
     list-style: none;
 }
-header .content ul li a{
+header .content ul li a,
+ion-icon{
     text-decoration: none;
     color: var(--text);
     font-size: 20px;

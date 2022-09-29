@@ -11,6 +11,8 @@ let currentIndexData = 1;
 let rightAnswer = 0;
 var MinutesDown = 60 * 1.25;
 let containQuestions;
+let randomNum = shuffle([1,2,3,4,5]);
+console.log(randomNum);
 
 
 let jsQuestions = "./jsonQuestions/Javascript_question.json";
@@ -51,6 +53,7 @@ questionCards.forEach((card)=> {
 let questionCardsPage = document.querySelectorAll(".content .categories .category");
 questionCardsPage.forEach((card)=> {
     card.addEventListener('click', ()=> {
+        // clearInterval(timingInterval);
         removeQuestion();
         currentIndexData = 1;
         rightAnswer = 0;
@@ -74,10 +77,10 @@ function getQueses() {
     xhttp.onreadystatechange = function () {
         if(xhttp.readyState == 4 && xhttp.status == 200) {
             let data = JSON.parse(this.responseText);
-            // console.log(data);
+
             //give number of length
             numberOf.innerHTML = `<span>${currentIndexData}</span> From ${data.length}`;
-            addAllDataNow(data[currentIndexData - 1], data.length);
+            addAllDataNow(data[randomNum[currentIndexData - 1] - 1], data.length);
 
             // interval function
             let time = document.querySelector(".info .time");
@@ -91,7 +94,7 @@ function getQueses() {
                     //check if the right answer or and get it up
                     let checkInput = document.querySelectorAll(".answers .answer input");
                     checkInput.forEach((input)=> {
-                        if(input.checked === true) { input.dataset.answer === data[currentIndexData - 1].correct_answer? rightAnswer++ : false ; }
+                        if(input.checked === true) { input.dataset.answer === data[randomNum[currentIndexData - 1] - 1].correct_answer? rightAnswer++ : false ; }
                     });
 
                     // delete all of old data to get the next
@@ -105,7 +108,7 @@ function getQueses() {
                     numberOf.innerHTML = `<span>${currentIndexData}</span> From ${data.length}`;
 
                     // add the function of adding the elements
-                    addAllDataNow(data[currentIndexData - 1], data.length);
+                    addAllDataNow(data[randomNum[currentIndexData - 1] - 1], data.length);
 
                     // active interval with click
                     let time = document.querySelector(".info .time");
@@ -202,6 +205,12 @@ function startTimer(duration, display) {
             clearInterval(timingInterval);
             NextButton.click();
         }
+
+        questionCardsPage.forEach((card)=> {
+            card.addEventListener('click', ()=> {
+                clearInterval(timingInterval);
+            })
+        })
     }, 1000);
 }
 
@@ -216,3 +225,25 @@ function removeQuestion() {
     answers.forEach(answer=> answer.remove());
     document.querySelector("section .content .title h2").remove();
 }
+
+function shuffle(array) {
+    var i = array.length,
+        j = 0,
+        temp;
+
+    while (i--) {
+
+        j = Math.floor(Math.random() * (i+1));
+
+        // swap randomly chosen element with current element
+        temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+
+    }
+
+    return array;
+}
+
+
+
